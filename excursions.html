@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>OUR EXCURSIONS</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20230129192945">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header data-scroll="124" data-scroll-show class="header">
+			<div class="header__container">
+				<a href="index.html" class="header__logo"><img src="img/logo.svg" alt="logo"></a>
+				<div class="header__menu menu">
+					<button type="button" class="menu__icon icon-menu"><span></span></button>
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item"><a href="index.html" class="menu__link">Home</a></li>
+							<li class="menu__item"><a href="excursions.html" class="menu__link">Excursions</a></li>
+							<li class="menu__item"><a href="cabinet.html" class="menu__link">Private office</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<section data-prlx-parent class="our-excursions">
+				<div class="our-excursions__container">
+					<h1 class="our-excursions__title">OUR EXCURSIONS</h1>
+				</div>
+				<picture><source srcset="img/excursions/our-excursions/image-bg.webp" type="image/webp"><img data-prlx src="img/excursions/our-excursions/image-bg.jpg" alt="image" class="image-parallax"></picture>
+			</section>
+			<div data-tabs class="tabs-our-excursions">
+				<div class="tabs-our-excursions__container">
+					<div class="tabs-our-excursions__control">
+						<nav data-tabs-titles class="tabs-our-excursions__navigation">
+							<button type="button" class="tabs-our-excursions__title _tab-active">Bus tour</button>
+							<button type="button" class="tabs-our-excursions__title">Jeeping</button>
+							<button type="button" class="tabs-our-excursions__title">Yachting</button>
+							<button type="button" class="tabs-our-excursions__title">Canyoning</button>
+						</nav>
+						<form action="#" method="#" class="tabs-our-excursions__form form-our-excursions">
+							<div class="form-our-excursions__select input-book">
+								<select name="form[]" data-class-modif="form" id="location">
+									<option data-class="location-option" value="Carpathians" selected>Carpathians</option>
+									<option data-class="location-option" value="Black Sea">Black Sea</option>
+									<option data-class="location-option" value="Crimea">Crimea</option>
+									<option data-class="location-option" value="Maldives">Maldives</option>
+								</select>
+								<label for="location" class="input-book__lable input-book__lable_absolute _icon-location"></label>
+							</div>
+							<div class="form-our-excursions__input input-book">
+								<input data-same-date autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Date" class="input-book__inp datepicker" id="datepicker">
+								<label for="datepicker" class="input-book__lable _icon-calendar"></label>
+							</div>
+							<div class="form-our-excursions__select input-book">
+								<select data-scroll name="form[]" data-class-modif="form" id="countOfPeople">
+									<option data-class="people-option" value="1 person" selected>1 person</option>
+									<option data-class="people-option" value="2 persons">2 persons</option>
+									<option data-class="people-option" value="3 persons">3 persons</option>
+									<option data-class="people-option" value="4 persons">4 persons</option>
+									<option data-class="people-option" value="5 persons">5 persons</option>
+									<option data-class="people-option" value="6 человек">6 человек</option>
+									<option data-class="people-option" value="7 человек">7 человек</option>
+									<option data-class="people-option" value="8 человек">8 человек</option>
+									<option data-class="people-option" value="9 человек">9 человек</option>
+									<option data-class="people-option" value="10 человек">10 человек</option>
+									<option data-class="people-option" value="Больше 10 человек">Больше 10 человек</option>
+								</select>
+								<label for="countOfPeople" class="input-book__lable input-book__lable_absolute _icon-persons"></label>
+							</div>
+							<button data-change-button type="button" class="form-our-excursions__button button">Show</button>
+						</form>
+					</div>
+					<div class="tabs-our-excursions__block">
+						<aside class="tabs-our-excursions__filters filters-excursions">
+							<h4 class="filters-excursions__title">Filters</h4>
+							<form action="#" method="post">
+								<div data-spollers class="filters-excursions__spollers spollers-filters">
+									<div class="spollers-filters__item">
+										<button type="button" data-spoller class="spollers-filters__title">Price</button>
+										<div class="spollers-filters__body">
+											<div class="spollers-filters__price-range">
+												<input autocomplete="off" type="text" class="spollers-filters__input" id="price-start">
+												<input autocomplete="off" type="text" class="spollers-filters__input" id="price-end">
+											</div>
+											<div id="range"></div>
+										</div>
+									</div>
+									<div class="spollers-filters__item">
+										<button type="button" data-spoller class="spollers-filters__title">Number of persons</button>
+										<div class="spollers-filters__body">
+											<div class="spollers-filters-options">
+												<div class="spollers-filters-options__item">
+													<input id="onePerson" class="spollers-filters-options__input" checked type="radio" value="1 person" name="people">
+													<label for="onePerson" class="spollers-filters-options__label"><span class="spollers-filters-options__text">1 person</span></label>
+												</div>
+												<div class="spollers-filters-options__item">
+													<input id="twoPersons" class="spollers-filters-options__input" type="radio" value="2 persons" name="people">
+													<label for="twoPersons" class="spollers-filters-options__label"><span class="spollers-filters-options__text">2 persons</span></label>
+												</div>
+												<div class="spollers-filters-options__item">
+													<input id="threePersons" class="spollers-filters-options__input" type="radio" value="3 persons" name="people">
+													<label for="threePersons" class="spollers-filters-options__label"><span class="spollers-filters-options__text">3 persons</span></label>
+												</div>
+												<div class="spollers-filters-options__item">
+													<input id="fourPersons" class="spollers-filters-options__input" type="radio" value="4 persons" name="people">
+													<label for="fourPersons" class="spollers-filters-options__label"><span class="spollers-filters-options__text">4 persons</span></label>
+												</div>
+												<div class="spollers-filters-options__item">
+													<input id="fivePersons" class="spollers-filters-options__input" type="radio" value="5 persons" name="people">
+													<label for="fivePersons" class="spollers-filters-options__label"><span class="spollers-filters-options__text">5 persons</span></label>
+												</div>
+												<div class="spollers-filters-options__item">
+													<input id="sixPersons" class="spollers-filters-options__input" type="radio" value="6 persons" name="people">
+													<label for="sixPersons" class="spollers-filters-options__label"><span class="spollers-filters-options__text">6 persons</span></label>
+												</div>
+												<div class="spollers-filters-options__item">
+													<input id="sevenPersons" class="spollers-filters-options__input" type="radio" value="7 persons" name="people">
+													<label for="sevenPersons" class="spollers-filters-options__label"><span class="spollers-filters-options__text">7 persons</span></label>
+												</div>
+												<div class="spollers-filters-options__item">
+													<input id="eightPersons" class="spollers-filters-options__input" type="radio" value="8 persons" name="people">
+													<label for="eightPersons" class="spollers-filters-options__label"><span class="spollers-filters-options__text">8 persons</span></label>
+												</div>
+												<div class="spollers-filters-options__item">
+													<input id="ninePersons" class="spollers-filters-options__input" type="radio" value="9 persons" name="people">
+													<label for="ninePersons" class="spollers-filters-options__label"><span class="spollers-filters-options__text">9 persons</span></label>
+												</div>
+												<div class="spollers-filters-options__item">
+													<input id="tenPersons" class="spollers-filters-options__input" type="radio" value="10 persons" name="people">
+													<label for="tenPersons" class="spollers-filters-options__label"><span class="spollers-filters-options__text">10 persons</span></label>
+												</div>
+												<div class="spollers-filters-options__item spollers-filters-options__item_big">
+													<input id="moreThanTenPeople" class="spollers-filters-options__input" type="radio" value="More than 10 people" name="people">
+													<label for="moreThanTenPeople" class="spollers-filters-options__label"><span class="spollers-filters-options__text">More than 10 people</span></label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="spollers-filters__item">
+										<button type="button" data-spoller class="spollers-filters__title">Place</button>
+										<div class="spollers-filters__body">
+											<div class="spollers-filters__options options">
+												<div class="options__item">
+													<input id="abkhazia" class="options__input" checked type="radio" value="Carpathians" name="location">
+													<label for="abkhazia" class="options__label"><span class="options__text">Carpathians</span></label>
+												</div>
+												<div class="options__item">
+													<input id="krasnaya-polyana" class="options__input" type="radio" value="Black Sea" name="location">
+													<label for="krasnaya-polyana" class="options__label"><span class="options__text">Black Sea</span></label>
+												</div>
+												<div class="options__item">
+													<input id="sochi" class="options__input" type="radio" value="Crimea" name="location">
+													<label for="sochi" class="options__label"><span class="options__text">Crimea</span></label>
+												</div>
+												<div class="options__item">
+													<input id="adler" class="options__input" type="radio" value="Maldives" name="location">
+													<label for="adler" class="options__label"><span class="options__text">Maldives</span></label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="spollers-filters__item">
+										<button type="button" data-spoller class="spollers-filters__title">Duration</button>
+										<div class="spollers-filters__body">
+											<div class="spollers-filters-options">
+												<div class="spollers-filters-options__item">
+													<input id="hourAndHalf" class="spollers-filters-options__input" checked type="radio" value="1,5 hour" name="time">
+													<label for="hourAndHalf" class="spollers-filters-options__label"><span class="spollers-filters-options__text">1,5 hour</span></label>
+												</div>
+												<div class="spollers-filters-options__item">
+													<input id="twoAndHalfHours" class="spollers-filters-options__input" type="radio" value="2.5 hours" name="time">
+													<label for="twoAndHalfHours" class="spollers-filters-options__label"><span class="spollers-filters-options__text">2.5 hours</span></label>
+												</div>
+												<div class="spollers-filters-options__item">
+													<input id="fourHours" class="spollers-filters-options__input" type="radio" value="4 hours" name="time">
+													<label for="fourHours" class="spollers-filters-options__label"><span class="spollers-filters-options__text">4 hours</span></label>
+												</div>
+												<div class="spollers-filters-options__item">
+													<input id="sixHours" class="spollers-filters-options__input" type="radio" value="6 hours" name="time">
+													<label for="sixHours" class="spollers-filters-options__label"><span class="spollers-filters-options__text">6 hours</span></label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="spollers-filters__item">
+										<button type="button" data-spoller class="spollers-filters__title">Date</button>
+										<div class="spollers-filters__body">
+											<div class="spollers-filters__datepicker input-book">
+												<input data-same-date autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Date" class="input-book__inp datepicker" id="datepickerTwo">
+												<label for="datepickerTwo" class="input-book__lable _icon-calendar"></label>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="filters-excursions__bottom">
+									<button data-change-button type="button" class="filters-excursions__button button">Show</button>
+									<button type="reset" class="filters-excursions__reset">Reset filters</button>
+								</div>
+							</form>
+						</aside>
+						<div class="tabs-our-excursions__box">
+							<h2 class="tabs-our-excursions__main-title">Our tours</h2>
+							<div data-tabs-body class="tabs-our-excursions__content">
+								<div class="tabs-our-excursions__body body-tabs-excursions">
+									<div class="body-tabs-excursions__items">
+										<article data-price="1618" data-duration="2.5 hours" data-persons="10 persons" data-location="Black Sea" class="body-tabs-excursions__item item-tabs-excursions">
+											<a href="excursion.html" class="item-tabs-excursions__image-ibg"><picture><source data-srcset="img/excursions/body-tabs-excursions/image1.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/excursions/body-tabs-excursions/image1.jpg" alt="image"></picture></a>
+											<div class="item-tabs-excursions__body">
+												<div class="item-tabs-excursions__top">
+													<div class="item-tabs-excursions__type">Bus tour</div>
+													<h3 class="item-tabs-excursions__title"><a href="excursion.html">Black Sea</a></h3>
+												</div>
+												<div class="item-tabs-excursions__info">
+													<div class="item-tabs-excursions__prices prices-list">
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">1 618 $</div>
+															<div class="prices-list__text">Adult ticket</div>
+														</div>
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">1 412 $</div>
+															<div class="prices-list__text">Child ticket</div>
+														</div>
+													</div>
+													<div class="item-tabs-excursions__time _icon-clock">2.5 hours</div>
+												</div>
+												<div class="item-tabs-excursions__description">
+													<p class="item-tabs-excursions__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo reprehenderit quia culpa cupiditate exercitationem, incidunt aperiam expedita iure sequi laboriosam voluptatibus adipisci alias earum voluptas atque, recusandae libero unde ipsa.</p>
+												</div>
+												<div class="item-tabs-excursions__buttons">
+													<a href="excursion.html" class="item-tabs-excursions__button button">More</a>
+													<button class="item-tabs-excursions__like like-button _icon-heart"></button>
+												</div>
+											</div>
+										</article>
+										<article data-price="3250" data-duration="1,5 hour" data-persons="8 persons" data-location="Carpathians" class="body-tabs-excursions__item item-tabs-excursions">
+											<a href="excursion.html" class="item-tabs-excursions__image-ibg"><picture><source data-srcset="img/excursions/body-tabs-excursions/image3.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/excursions/body-tabs-excursions/image3.jpg" alt="image"></picture></a>
+											<div class="item-tabs-excursions__body">
+												<div class="item-tabs-excursions__top">
+													<div class="item-tabs-excursions__type">Bus tour</div>
+													<h3 class="item-tabs-excursions__title"><a href="excursion.html">Carpathians</a></h3>
+												</div>
+												<div class="item-tabs-excursions__info">
+													<div class="item-tabs-excursions__prices prices-list">
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">3 250 $</div>
+															<div class="prices-list__text">Adult ticket</div>
+														</div>
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">6 312 $</div>
+															<div class="prices-list__text">Child ticket</div>
+														</div>
+													</div>
+													<div class="item-tabs-excursions__time _icon-clock">1,5 hour</div>
+												</div>
+												<div class="item-tabs-excursions__description">
+													<p class="item-tabs-excursions__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo reprehenderit quia culpa cupiditate exercitationem, incidunt aperiam expedita iure sequi laboriosam voluptatibus adipisci alias earum voluptas atque, recusandae libero unde ipsa.</p>
+												</div>
+												<div class="item-tabs-excursions__buttons">
+													<a href="excursion.html" class="item-tabs-excursions__button button">More</a>
+													<button class="item-tabs-excursions__like like-button _icon-heart"></button>
+												</div>
+											</div>
+										</article>
+										<article data-price="4800" data-duration="4 hours" data-persons="7 persons" data-location="Carpathians" class="body-tabs-excursions__item item-tabs-excursions">
+											<a href="excursion.html" class="item-tabs-excursions__image-ibg"><picture><source data-srcset="img/excursions/body-tabs-excursions/image1.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/excursions/body-tabs-excursions/image1.jpg" alt="image"></picture></a>
+											<div class="item-tabs-excursions__body">
+												<div class="item-tabs-excursions__top">
+													<div class="item-tabs-excursions__type">Bus tour</div>
+													<h3 class="item-tabs-excursions__title"><a href="excursion.html">Carpathians</a></h3>
+												</div>
+												<div class="item-tabs-excursions__info">
+													<div class="item-tabs-excursions__prices prices-list">
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">4 800 $</div>
+															<div class="prices-list__text">Adult ticket</div>
+														</div>
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">3 200 $</div>
+															<div class="prices-list__text">Child ticket</div>
+														</div>
+													</div>
+													<div class="item-tabs-excursions__time _icon-clock">4 hours</div>
+												</div>
+												<div class="item-tabs-excursions__description">
+													<p class="item-tabs-excursions__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo reprehenderit quia culpa cupiditate exercitationem, incidunt aperiam expedita iure sequi laboriosam voluptatibus adipisci alias earum voluptas atque, recusandae libero unde ipsa.</p>
+												</div>
+												<div class="item-tabs-excursions__buttons">
+													<a href="excursion.html" class="item-tabs-excursions__button button">More</a>
+													<button class="item-tabs-excursions__like like-button _icon-heart"></button>
+												</div>
+											</div>
+										</article>
+										<article data-price="6512" data-duration="1,5 hour" data-persons="8 persons" data-location="Carpathians" class="body-tabs-excursions__item item-tabs-excursions">
+											<a href="excursion.html" class="item-tabs-excursions__image-ibg"><picture><source data-srcset="img/excursions/body-tabs-excursions/image3.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/excursions/body-tabs-excursions/image3.jpg" alt="image"></picture></a>
+											<div class="item-tabs-excursions__body">
+												<div class="item-tabs-excursions__top">
+													<div class="item-tabs-excursions__type">Bus tour</div>
+													<h3 class="item-tabs-excursions__title"><a href="excursion.html">Carpathians</a></h3>
+												</div>
+												<div class="item-tabs-excursions__info">
+													<div class="item-tabs-excursions__prices prices-list">
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">6 512 $</div>
+															<div class="prices-list__text">Adult ticket</div>
+														</div>
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">6 312 $</div>
+															<div class="prices-list__text">Child ticket</div>
+														</div>
+													</div>
+													<div class="item-tabs-excursions__time _icon-clock">1,5 hour</div>
+												</div>
+												<div class="item-tabs-excursions__description">
+													<p class="item-tabs-excursions__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo reprehenderit quia culpa cupiditate exercitationem, incidunt aperiam expedita iure sequi laboriosam voluptatibus adipisci alias earum voluptas atque, recusandae libero unde ipsa.</p>
+												</div>
+												<div class="item-tabs-excursions__buttons">
+													<a href="excursion.html" class="item-tabs-excursions__button button">More</a>
+													<button class="item-tabs-excursions__like like-button _icon-heart"></button>
+												</div>
+											</div>
+										</article>
+										<article data-price="6214" data-duration="6 hours" data-persons="8 persons" data-location="Carpathians" class="body-tabs-excursions__item item-tabs-excursions">
+											<a href="excursion.html" class="item-tabs-excursions__image-ibg"><picture><source data-srcset="img/excursions/body-tabs-excursions/image1.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/excursions/body-tabs-excursions/image1.jpg" alt="image"></picture></a>
+											<div class="item-tabs-excursions__body">
+												<div class="item-tabs-excursions__top">
+													<div class="item-tabs-excursions__type">Bus tour</div>
+													<h3 class="item-tabs-excursions__title"><a href="excursion.html">Carpathians</a></h3>
+												</div>
+												<div class="item-tabs-excursions__info">
+													<div class="item-tabs-excursions__prices prices-list">
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">6 214 $</div>
+															<div class="prices-list__text">Adult ticket</div>
+														</div>
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">4 327 $</div>
+															<div class="prices-list__text">Child ticket</div>
+														</div>
+													</div>
+													<div class="item-tabs-excursions__time _icon-clock">6 hours</div>
+												</div>
+												<div class="item-tabs-excursions__description">
+													<p class="item-tabs-excursions__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo reprehenderit quia culpa cupiditate exercitationem, incidunt aperiam expedita iure sequi laboriosam voluptatibus adipisci alias earum voluptas atque, recusandae libero unde ipsa.</p>
+												</div>
+												<div class="item-tabs-excursions__buttons">
+													<a href="excursion.html" class="item-tabs-excursions__button button">More</a>
+													<button class="item-tabs-excursions__like like-button _icon-heart"></button>
+												</div>
+											</div>
+										</article>
+										<article data-price="1618" data-duration="2.5 hours" data-persons="More than 10 persons" data-location="Crimea" class="body-tabs-excursions__item item-tabs-excursions">
+											<a href="excursion.html" class="item-tabs-excursions__image-ibg"><picture><source data-srcset="img/excursions/body-tabs-excursions/image1.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/excursions/body-tabs-excursions/image1.jpg" alt="image"></picture></a>
+											<div class="item-tabs-excursions__body">
+												<div class="item-tabs-excursions__top">
+													<div class="item-tabs-excursions__type">Bus tour</div>
+													<h3 class="item-tabs-excursions__title"><a href="excursion.html">Crimea</a></h3>
+												</div>
+												<div class="item-tabs-excursions__info">
+													<div class="item-tabs-excursions__prices prices-list">
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">1 618 $</div>
+															<div class="prices-list__text">Adult ticket</div>
+														</div>
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">1 412 $</div>
+															<div class="prices-list__text">Child ticket</div>
+														</div>
+													</div>
+													<div class="item-tabs-excursions__time _icon-clock">2.5 hours</div>
+												</div>
+												<div class="item-tabs-excursions__description">
+													<p class="item-tabs-excursions__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo reprehenderit quia culpa cupiditate exercitationem, incidunt aperiam expedita iure sequi laboriosam voluptatibus adipisci alias earum voluptas atque, recusandae libero unde ipsa.</p>
+												</div>
+												<div class="item-tabs-excursions__buttons">
+													<a href="excursion.html" class="item-tabs-excursions__button button">More</a>
+													<button class="item-tabs-excursions__like like-button _icon-heart"></button>
+												</div>
+											</div>
+										</article>
+									</div>
+								</div>
+								<div class="tabs-our-excursions__body body-tabs-excursions">
+									<div class="body-tabs-excursions__items">
+										<article data-price="1732" data-duration="1,5 hour" data-persons="4 persons" data-location="Crimea" class="body-tabs-excursions__item item-tabs-excursions">
+											<a href="excursion.html" class="item-tabs-excursions__image-ibg"><picture><source data-srcset="img/excursions/body-tabs-excursions/image2.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/excursions/body-tabs-excursions/image2.jpg" alt="image"></picture></a>
+											<div class="item-tabs-excursions__body">
+												<div class="item-tabs-excursions__top">
+													<div class="item-tabs-excursions__type">Jeeping</div>
+													<h3 class="item-tabs-excursions__title"><a href="excursion.html">Crimea</a></h3>
+												</div>
+												<div class="item-tabs-excursions__info">
+													<div class="item-tabs-excursions__prices prices-list">
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">1 732 $</div>
+															<div class="prices-list__text">Adult ticket</div>
+														</div>
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">1 212 $</div>
+															<div class="prices-list__text">Child ticket</div>
+														</div>
+													</div>
+													<div class="item-tabs-excursions__time _icon-clock">1,5 hour</div>
+												</div>
+												<div class="item-tabs-excursions__description">
+													<p class="item-tabs-excursions__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo reprehenderit quia culpa cupiditate exercitationem, incidunt aperiam expedita iure sequi laboriosam voluptatibus adipisci alias earum voluptas atque, recusandae libero unde ipsa.</p>
+												</div>
+												<div class="item-tabs-excursions__buttons">
+													<a href="excursion.html" class="item-tabs-excursions__button button">More</a>
+													<button class="item-tabs-excursions__like like-button _icon-heart"></button>
+												</div>
+											</div>
+										</article>
+										<article data-price="5234" data-duration="4 hours" data-persons="3 persons" data-location="Carpathians" class="body-tabs-excursions__item item-tabs-excursions">
+											<a href="excursion.html" class="item-tabs-excursions__image-ibg"><picture><source data-srcset="img/excursions/body-tabs-excursions/image2.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/excursions/body-tabs-excursions/image2.jpg" alt="image"></picture></a>
+											<div class="item-tabs-excursions__body">
+												<div class="item-tabs-excursions__top">
+													<div class="item-tabs-excursions__type">Jeeping</div>
+													<h3 class="item-tabs-excursions__title"><a href="excursion.html">Carpathians</a></h3>
+												</div>
+												<div class="item-tabs-excursions__info">
+													<div class="item-tabs-excursions__prices prices-list">
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">5 234 $</div>
+															<div class="prices-list__text">Adult ticket</div>
+														</div>
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">4 768 $</div>
+															<div class="prices-list__text">Child ticket</div>
+														</div>
+													</div>
+													<div class="item-tabs-excursions__time _icon-clock">4 hours</div>
+												</div>
+												<div class="item-tabs-excursions__description">
+													<p class="item-tabs-excursions__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo reprehenderit quia culpa cupiditate exercitationem, incidunt aperiam expedita iure sequi laboriosam voluptatibus adipisci alias earum voluptas atque, recusandae libero unde ipsa.</p>
+												</div>
+												<div class="item-tabs-excursions__buttons">
+													<a href="excursion.html" class="item-tabs-excursions__button button">More</a>
+													<button class="item-tabs-excursions__like like-button _icon-heart"></button>
+												</div>
+											</div>
+										</article>
+										<article data-price="768" data-duration="1,5 hour" data-persons="5 persons" data-location="Maldives" class="body-tabs-excursions__item item-tabs-excursions">
+											<a href="excursion.html" class="item-tabs-excursions__image-ibg"><picture><source data-srcset="img/excursions/body-tabs-excursions/image2.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/excursions/body-tabs-excursions/image2.jpg" alt="image"></picture></a>
+											<div class="item-tabs-excursions__body">
+												<div class="item-tabs-excursions__top">
+													<div class="item-tabs-excursions__type">Jeeping</div>
+													<h3 class="item-tabs-excursions__title"><a href="excursion.html">Maldivesа</a></h3>
+												</div>
+												<div class="item-tabs-excursions__info">
+													<div class="item-tabs-excursions__prices prices-list">
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">768 $</div>
+															<div class="prices-list__text">Adult ticket</div>
+														</div>
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">457 $</div>
+															<div class="prices-list__text">Child ticket</div>
+														</div>
+													</div>
+													<div class="item-tabs-excursions__time _icon-clock">1,5 hour</div>
+												</div>
+												<div class="item-tabs-excursions__description">
+													<p class="item-tabs-excursions__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo reprehenderit quia culpa cupiditate exercitationem, incidunt aperiam expedita iure sequi laboriosam voluptatibus adipisci alias earum voluptas atque, recusandae libero unde ipsa.</p>
+												</div>
+												<div class="item-tabs-excursions__buttons">
+													<a href="excursion.html" class="item-tabs-excursions__button button">More</a>
+													<button class="item-tabs-excursions__like like-button _icon-heart"></button>
+												</div>
+											</div>
+										</article>
+										<article data-price="2380" data-duration="2.5 hours" data-persons="10 persons" data-location="Black Sea" class="body-tabs-excursions__item item-tabs-excursions">
+											<a href="excursion.html" class="item-tabs-excursions__image-ibg"><picture><source data-srcset="img/excursions/body-tabs-excursions/image1.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/excursions/body-tabs-excursions/image1.jpg" alt="image"></picture></a>
+											<div class="item-tabs-excursions__body">
+												<div class="item-tabs-excursions__top">
+													<div class="item-tabs-excursions__type">Jeeping</div>
+													<h3 class="item-tabs-excursions__title"><a href="excursion.html">Black Sea</a></h3>
+												</div>
+												<div class="item-tabs-excursions__info">
+													<div class="item-tabs-excursions__prices prices-list">
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">2380 $</div>
+															<div class="prices-list__text">Adult ticket</div>
+														</div>
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">1 412 $</div>
+															<div class="prices-list__text">Child ticket</div>
+														</div>
+													</div>
+													<div class="item-tabs-excursions__time _icon-clock">2.5 hours</div>
+												</div>
+												<div class="item-tabs-excursions__description">
+													<p class="item-tabs-excursions__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo reprehenderit quia culpa cupiditate exercitationem, incidunt aperiam expedita iure sequi laboriosam voluptatibus adipisci alias earum voluptas atque, recusandae libero unde ipsa.</p>
+												</div>
+												<div class="item-tabs-excursions__buttons">
+													<a href="excursion.html" class="item-tabs-excursions__button button">More</a>
+													<button class="item-tabs-excursions__like like-button _icon-heart"></button>
+												</div>
+											</div>
+										</article>
+										<article data-price="6512" data-duration="1,5 hour" data-persons="8 persons" data-location="Carpathians" class="body-tabs-excursions__item item-tabs-excursions">
+											<a href="excursion.html" class="item-tabs-excursions__image-ibg"><picture><source data-srcset="img/excursions/body-tabs-excursions/image3.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/excursions/body-tabs-excursions/image3.jpg" alt="image"></picture></a>
+											<div class="item-tabs-excursions__body">
+												<div class="item-tabs-excursions__top">
+													<div class="item-tabs-excursions__type">Jeeping</div>
+													<h3 class="item-tabs-excursions__title"><a href="excursion.html">Carpathians</a></h3>
+												</div>
+												<div class="item-tabs-excursions__info">
+													<div class="item-tabs-excursions__prices prices-list">
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">6 512 $</div>
+															<div class="prices-list__text">Adult ticket</div>
+														</div>
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">6 312 $</div>
+															<div class="prices-list__text">Child ticket</div>
+														</div>
+													</div>
+													<div class="item-tabs-excursions__time _icon-clock">1,5 hour</div>
+												</div>
+												<div class="item-tabs-excursions__description">
+													<p class="item-tabs-excursions__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo reprehenderit quia culpa cupiditate exercitationem, incidunt aperiam expedita iure sequi laboriosam voluptatibus adipisci alias earum voluptas atque, recusandae libero unde ipsa.</p>
+												</div>
+												<div class="item-tabs-excursions__buttons">
+													<a href="excursion.html" class="item-tabs-excursions__button button">More</a>
+													<button class="item-tabs-excursions__like like-button _icon-heart"></button>
+												</div>
+											</div>
+										</article>
+									</div>
+								</div>
+								<div class="tabs-our-excursions__body body-tabs-excursions">
+									<div class="body-tabs-excursions__items">
+										<article data-price="2351" data-duration="6 hours" data-persons="6 persons" data-location="Maldives" class="body-tabs-excursions__item item-tabs-excursions">
+											<a href="excursion.html" class="item-tabs-excursions__image-ibg"><picture><source data-srcset="img/excursions/body-tabs-excursions/image3.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/excursions/body-tabs-excursions/image3.jpg" alt="image"></picture></a>
+											<div class="item-tabs-excursions__body">
+												<div class="item-tabs-excursions__top">
+													<div class="item-tabs-excursions__type">Yachting</div>
+													<h3 class="item-tabs-excursions__title"><a href="excursion.html">Maldivesа</a></h3>
+												</div>
+												<div class="item-tabs-excursions__info">
+													<div class="item-tabs-excursions__prices prices-list">
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">2 351 $</div>
+															<div class="prices-list__text">Adult ticket</div>
+														</div>
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">1 798 $</div>
+															<div class="prices-list__text">Child ticket</div>
+														</div>
+													</div>
+													<div class="item-tabs-excursions__time _icon-clock">6 hours</div>
+												</div>
+												<div class="item-tabs-excursions__description">
+													<p class="item-tabs-excursions__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo reprehenderit quia culpa cupiditate exercitationem, incidunt aperiam expedita iure sequi laboriosam voluptatibus adipisci alias earum voluptas atque, recusandae libero unde ipsa.</p>
+												</div>
+												<div class="item-tabs-excursions__buttons">
+													<a href="excursion.html" class="item-tabs-excursions__button button">More</a>
+													<button class="item-tabs-excursions__like like-button _icon-heart"></button>
+												</div>
+											</div>
+										</article>
+										<article data-price="6512" data-duration="1,5 hour" data-persons="8 persons" data-location="Black Sea" class="body-tabs-excursions__item item-tabs-excursions">
+											<a href="excursion.html" class="item-tabs-excursions__image-ibg"><picture><source data-srcset="img/excursions/body-tabs-excursions/image3.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/excursions/body-tabs-excursions/image3.jpg" alt="image"></picture></a>
+											<div class="item-tabs-excursions__body">
+												<div class="item-tabs-excursions__top">
+													<div class="item-tabs-excursions__type">Yachting</div>
+													<h3 class="item-tabs-excursions__title"><a href="excursion.html">Black Sea</a></h3>
+												</div>
+												<div class="item-tabs-excursions__info">
+													<div class="item-tabs-excursions__prices prices-list">
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">6 512 $</div>
+															<div class="prices-list__text">Adult ticket</div>
+														</div>
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">6 312 $</div>
+															<div class="prices-list__text">Child ticket</div>
+														</div>
+													</div>
+													<div class="item-tabs-excursions__time _icon-clock">1,5 hour</div>
+												</div>
+												<div class="item-tabs-excursions__description">
+													<p class="item-tabs-excursions__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo reprehenderit quia culpa cupiditate exercitationem, incidunt aperiam expedita iure sequi laboriosam voluptatibus adipisci alias earum voluptas atque, recusandae libero unde ipsa.</p>
+												</div>
+												<div class="item-tabs-excursions__buttons">
+													<a href="excursion.html" class="item-tabs-excursions__button button">More</a>
+													<button class="item-tabs-excursions__like like-button _icon-heart"></button>
+												</div>
+											</div>
+										</article>
+										<article data-price="1120" data-duration="2.5 hours" data-persons="10 persons" data-location="Black Sea" class="body-tabs-excursions__item item-tabs-excursions">
+											<a href="excursion.html" class="item-tabs-excursions__image-ibg"><picture><source data-srcset="img/excursions/body-tabs-excursions/image1.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/excursions/body-tabs-excursions/image1.jpg" alt="image"></picture></a>
+											<div class="item-tabs-excursions__body">
+												<div class="item-tabs-excursions__top">
+													<div class="item-tabs-excursions__type">Yachting</div>
+													<h3 class="item-tabs-excursions__title"><a href="excursion.html">Black Sea</a></h3>
+												</div>
+												<div class="item-tabs-excursions__info">
+													<div class="item-tabs-excursions__prices prices-list">
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">1 120 $</div>
+															<div class="prices-list__text">Adult ticket</div>
+														</div>
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">1 412 $</div>
+															<div class="prices-list__text">Child ticket</div>
+														</div>
+													</div>
+													<div class="item-tabs-excursions__time _icon-clock">2.5 hours</div>
+												</div>
+												<div class="item-tabs-excursions__description">
+													<p class="item-tabs-excursions__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo reprehenderit quia culpa cupiditate exercitationem, incidunt aperiam expedita iure sequi laboriosam voluptatibus adipisci alias earum voluptas atque, recusandae libero unde ipsa.</p>
+												</div>
+												<div class="item-tabs-excursions__buttons">
+													<a href="excursion.html" class="item-tabs-excursions__button button">More</a>
+													<button class="item-tabs-excursions__like like-button _icon-heart"></button>
+												</div>
+											</div>
+										</article>
+										<article data-price="1618" data-duration="4 hours" data-persons="10 persons" data-location="Black Sea" class="body-tabs-excursions__item item-tabs-excursions">
+											<a href="excursion.html" class="item-tabs-excursions__image-ibg"><picture><source data-srcset="img/excursions/body-tabs-excursions/image3.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/excursions/body-tabs-excursions/image3.jpg" alt="image"></picture></a>
+											<div class="item-tabs-excursions__body">
+												<div class="item-tabs-excursions__top">
+													<div class="item-tabs-excursions__type">Yachting</div>
+													<h3 class="item-tabs-excursions__title"><a href="excursion.html">Black Sea</a></h3>
+												</div>
+												<div class="item-tabs-excursions__info">
+													<div class="item-tabs-excursions__prices prices-list">
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">1 618 $</div>
+															<div class="prices-list__text">Adult ticket</div>
+														</div>
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">1 412 $</div>
+															<div class="prices-list__text">Child ticket</div>
+														</div>
+													</div>
+													<div class="item-tabs-excursions__time _icon-clock">4 hours</div>
+												</div>
+												<div class="item-tabs-excursions__description">
+													<p class="item-tabs-excursions__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo reprehenderit quia culpa cupiditate exercitationem, incidunt aperiam expedita iure sequi laboriosam voluptatibus adipisci alias earum voluptas atque, recusandae libero unde ipsa.</p>
+												</div>
+												<div class="item-tabs-excursions__buttons">
+													<a href="excursion.html" class="item-tabs-excursions__button button">More</a>
+													<button class="item-tabs-excursions__like like-button _icon-heart"></button>
+												</div>
+											</div>
+										</article>
+										<article data-price="5432" data-duration="6 hours" data-persons="More than 10 persons" data-location="Carpathians" class="body-tabs-excursions__item item-tabs-excursions">
+											<a href="excursion.html" class="item-tabs-excursions__image-ibg"><picture><source data-srcset="img/excursions/body-tabs-excursions/image3.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/excursions/body-tabs-excursions/image3.jpg" alt="image"></picture></a>
+											<div class="item-tabs-excursions__body">
+												<div class="item-tabs-excursions__top">
+													<div class="item-tabs-excursions__type">Yachting</div>
+													<h3 class="item-tabs-excursions__title"><a href="excursion.html">Carpathians</a></h3>
+												</div>
+												<div class="item-tabs-excursions__info">
+													<div class="item-tabs-excursions__prices prices-list">
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">5 432 $</div>
+															<div class="prices-list__text">Adult ticket</div>
+														</div>
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">4 213 $</div>
+															<div class="prices-list__text">Child ticket</div>
+														</div>
+													</div>
+													<div class="item-tabs-excursions__time _icon-clock">6 hours</div>
+												</div>
+												<div class="item-tabs-excursions__description">
+													<p class="item-tabs-excursions__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo reprehenderit quia culpa cupiditate exercitationem, incidunt aperiam expedita iure sequi laboriosam voluptatibus adipisci alias earum voluptas atque, recusandae libero unde ipsa.</p>
+												</div>
+												<div class="item-tabs-excursions__buttons">
+													<a href="excursion.html" class="item-tabs-excursions__button button">More</a>
+													<button class="item-tabs-excursions__like like-button _icon-heart"></button>
+												</div>
+											</div>
+										</article>
+										<article data-price="3768" data-duration="2.5 hours" data-persons="10 persons" data-location="Black Sea" class="body-tabs-excursions__item item-tabs-excursions">
+											<a href="excursion.html" class="item-tabs-excursions__image-ibg"><picture><source data-srcset="img/excursions/body-tabs-excursions/image1.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/excursions/body-tabs-excursions/image1.jpg" alt="image"></picture></a>
+											<div class="item-tabs-excursions__body">
+												<div class="item-tabs-excursions__top">
+													<div class="item-tabs-excursions__type">Yachting</div>
+													<h3 class="item-tabs-excursions__title"><a href="excursion.html">Black Sea</a></h3>
+												</div>
+												<div class="item-tabs-excursions__info">
+													<div class="item-tabs-excursions__prices prices-list">
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">3 768 $</div>
+															<div class="prices-list__text">Adult ticket</div>
+														</div>
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">1 412 $</div>
+															<div class="prices-list__text">Child ticket</div>
+														</div>
+													</div>
+													<div class="item-tabs-excursions__time _icon-clock">2.5 hours</div>
+												</div>
+												<div class="item-tabs-excursions__description">
+													<p class="item-tabs-excursions__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo reprehenderit quia culpa cupiditate exercitationem, incidunt aperiam expedita iure sequi laboriosam voluptatibus adipisci alias earum voluptas atque, recusandae libero unde ipsa.</p>
+												</div>
+												<div class="item-tabs-excursions__buttons">
+													<a href="excursion.html" class="item-tabs-excursions__button button">More</a>
+													<button class="item-tabs-excursions__like like-button _icon-heart"></button>
+												</div>
+											</div>
+										</article>
+									</div>
+								</div>
+								<div class="tabs-our-excursions__body body-tabs-excursions">
+									<div class="body-tabs-excursions__items">
+										<article data-price="1618" data-duration="2.5 hours" data-persons="2 persons" data-location="Black Sea" class="body-tabs-excursions__item item-tabs-excursions">
+											<a href="excursion.html" class="item-tabs-excursions__image-ibg"><picture><source data-srcset="img/excursions/body-tabs-excursions/image4.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/excursions/body-tabs-excursions/image4.jpg" alt="image"></picture></a>
+											<div class="item-tabs-excursions__body">
+												<div class="item-tabs-excursions__top">
+													<div class="item-tabs-excursions__type">Canyoning</div>
+													<h3 class="item-tabs-excursions__title"><a href="excursion.html">Black Sea</a></h3>
+												</div>
+												<div class="item-tabs-excursions__info">
+													<div class="item-tabs-excursions__prices prices-list">
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">1 618 $</div>
+															<div class="prices-list__text">Adult ticket</div>
+														</div>
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">1 412 $</div>
+															<div class="prices-list__text">Child ticket</div>
+														</div>
+													</div>
+													<div class="item-tabs-excursions__time _icon-clock">2.5 hours</div>
+												</div>
+												<div class="item-tabs-excursions__description">
+													<p class="item-tabs-excursions__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo reprehenderit quia culpa cupiditate exercitationem, incidunt aperiam expedita iure sequi laboriosam voluptatibus adipisci alias earum voluptas atque, recusandae libero unde ipsa.</p>
+												</div>
+												<div class="item-tabs-excursions__buttons">
+													<a href="excursion.html" class="item-tabs-excursions__button button">More</a>
+													<button class="item-tabs-excursions__like like-button _icon-heart"></button>
+												</div>
+											</div>
+										</article>
+										<article data-price="2318" data-duration="4 hours" data-persons="1 person" data-location="Maldives" class="body-tabs-excursions__item item-tabs-excursions">
+											<a href="excursion.html" class="item-tabs-excursions__image-ibg"><picture><source data-srcset="img/excursions/body-tabs-excursions/image4.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/excursions/body-tabs-excursions/image4.jpg" alt="image"></picture></a>
+											<div class="item-tabs-excursions__body">
+												<div class="item-tabs-excursions__top">
+													<div class="item-tabs-excursions__type">Canyoning</div>
+													<h3 class="item-tabs-excursions__title"><a href="excursion.html">Maldivesа</a></h3>
+												</div>
+												<div class="item-tabs-excursions__info">
+													<div class="item-tabs-excursions__prices prices-list">
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">2 318 $</div>
+															<div class="prices-list__text">Adult ticket</div>
+														</div>
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">1 712 $</div>
+															<div class="prices-list__text">Child ticket</div>
+														</div>
+													</div>
+													<div class="item-tabs-excursions__time _icon-clock">4 hours</div>
+												</div>
+												<div class="item-tabs-excursions__description">
+													<p class="item-tabs-excursions__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo reprehenderit quia culpa cupiditate exercitationem, incidunt aperiam expedita iure sequi laboriosam voluptatibus adipisci alias earum voluptas atque, recusandae libero unde ipsa.</p>
+												</div>
+												<div class="item-tabs-excursions__buttons">
+													<a href="excursion.html" class="item-tabs-excursions__button button">More</a>
+													<button class="item-tabs-excursions__like like-button _icon-heart"></button>
+												</div>
+											</div>
+										</article>
+										<article data-price="3618" data-duration="2.5 hours" data-persons="3 persons" data-location="Black Sea" class="body-tabs-excursions__item item-tabs-excursions">
+											<a href="excursion.html" class="item-tabs-excursions__image-ibg"><picture><source data-srcset="img/excursions/body-tabs-excursions/image4.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/excursions/body-tabs-excursions/image4.jpg" alt="image"></picture></a>
+											<div class="item-tabs-excursions__body">
+												<div class="item-tabs-excursions__top">
+													<div class="item-tabs-excursions__type">Canyoning</div>
+													<h3 class="item-tabs-excursions__title"><a href="excursion.html">Black Sea</a></h3>
+												</div>
+												<div class="item-tabs-excursions__info">
+													<div class="item-tabs-excursions__prices prices-list">
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">3 618 $</div>
+															<div class="prices-list__text">Adult ticket</div>
+														</div>
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">3 212 $</div>
+															<div class="prices-list__text">Child ticket</div>
+														</div>
+													</div>
+													<div class="item-tabs-excursions__time _icon-clock">2.5 hours</div>
+												</div>
+												<div class="item-tabs-excursions__description">
+													<p class="item-tabs-excursions__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo reprehenderit quia culpa cupiditate exercitationem, incidunt aperiam expedita iure sequi laboriosam voluptatibus adipisci alias earum voluptas atque, recusandae libero unde ipsa.</p>
+												</div>
+												<div class="item-tabs-excursions__buttons">
+													<a href="excursion.html" class="item-tabs-excursions__button button">More</a>
+													<button class="item-tabs-excursions__like like-button _icon-heart"></button>
+												</div>
+											</div>
+										</article>
+										<article data-price="4239" data-duration="6 hours" data-persons="4 persons" data-location="Crimea" class="body-tabs-excursions__item item-tabs-excursions">
+											<a href="excursion.html" class="item-tabs-excursions__image-ibg"><picture><source data-srcset="img/excursions/body-tabs-excursions/image4.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/excursions/body-tabs-excursions/image4.jpg" alt="image"></picture></a>
+											<div class="item-tabs-excursions__body">
+												<div class="item-tabs-excursions__top">
+													<div class="item-tabs-excursions__type">Canyoning</div>
+													<h3 class="item-tabs-excursions__title"><a href="excursion.html">Crimea</a></h3>
+												</div>
+												<div class="item-tabs-excursions__info">
+													<div class="item-tabs-excursions__prices prices-list">
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">4 239 $</div>
+															<div class="prices-list__text">Adult ticket</div>
+														</div>
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">3 926 $</div>
+															<div class="prices-list__text">Child ticket</div>
+														</div>
+													</div>
+													<div class="item-tabs-excursions__time _icon-clock">6 hours</div>
+												</div>
+												<div class="item-tabs-excursions__description">
+													<p class="item-tabs-excursions__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo reprehenderit quia culpa cupiditate exercitationem, incidunt aperiam expedita iure sequi laboriosam voluptatibus adipisci alias earum voluptas atque, recusandae libero unde ipsa.</p>
+												</div>
+												<div class="item-tabs-excursions__buttons">
+													<a href="excursion.html" class="item-tabs-excursions__button button">More</a>
+													<button class="item-tabs-excursions__like like-button _icon-heart"></button>
+												</div>
+											</div>
+										</article>
+										<article data-price="2618" data-duration="2.5 hours" data-persons="2 persons" data-location="Black Sea" class="body-tabs-excursions__item item-tabs-excursions">
+											<a href="excursion.html" class="item-tabs-excursions__image-ibg"><picture><source data-srcset="img/excursions/body-tabs-excursions/image4.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/excursions/body-tabs-excursions/image4.jpg" alt="image"></picture></a>
+											<div class="item-tabs-excursions__body">
+												<div class="item-tabs-excursions__top">
+													<div class="item-tabs-excursions__type">Canyoning</div>
+													<h3 class="item-tabs-excursions__title"><a href="excursion.html">Black Sea</a></h3>
+												</div>
+												<div class="item-tabs-excursions__info">
+													<div class="item-tabs-excursions__prices prices-list">
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">2 618 $</div>
+															<div class="prices-list__text">Adult ticket</div>
+														</div>
+														<div class="prices-list__item">
+															<div class="prices-list__value _icon-money">1 412 $</div>
+															<div class="prices-list__text">Child ticket</div>
+														</div>
+													</div>
+													<div class="item-tabs-excursions__time _icon-clock">2.5 hours</div>
+												</div>
+												<div class="item-tabs-excursions__description">
+													<p class="item-tabs-excursions__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo reprehenderit quia culpa cupiditate exercitationem, incidunt aperiam expedita iure sequi laboriosam voluptatibus adipisci alias earum voluptas atque, recusandae libero unde ipsa.</p>
+												</div>
+												<div class="item-tabs-excursions__buttons">
+													<a href="excursion.html" class="item-tabs-excursions__button button">More</a>
+													<button class="item-tabs-excursions__like like-button _icon-heart"></button>
+												</div>
+											</div>
+										</article>
+									</div>
+								</div>
+							</div>
+							<ul class="tabs-our-excursions__pages">
+								<li class="tabs-our-excursions__page"><a href="excursion.html" class="tabs-our-excursions__previous-page _icon-select-arrow"></a></li>
+								<li class="tabs-our-excursions__page tabs-our-excursions__page_active"><a href="excursion.html">1</a></li>
+								<li class="tabs-our-excursions__page"><a href="excursion.html">2</a></li>
+								<li class="tabs-our-excursions__page">...</li>
+								<li class="tabs-our-excursions__page"><a href="excursion.html">5</a></li>
+								<li class="tabs-our-excursions__page"><a href="excursion.html" class="tabs-our-excursions__next-page _icon-select-arrow"></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__left-column">
+					<img src="img/logo.svg" alt="logo" class="footer__logo">
+					<nav data-da=".footer__right-column, 767, 0" class="footer__menu menu-footer">
+						<ul class="menu-footer__list">
+							<li class="menu-footer__item"><a href="index.html" class="menu-footer__link">Home</a></li>
+							<li class="menu-footer__item"><a href="excursions.html" class="menu-footer__link">Excursions</a></li>
+							<li class="menu-footer__item"><a href="#" class="menu-footer__link">Private office</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="footer__right-column">
+					<ul class="footer__contacts contacts-footer">
+						<li class="contacts-footer__item"><a href="tel:+380000000000" class="contacts-footer__link _icon-whatsapp">+38 000 000 00 00</a></li>
+						<li class="contacts-footer__item"><a href="tel:+381111111111" class="contacts-footer__link _icon-telegram">+38 111 111 11 11</a></li>
+						<li class="contacts-footer__item"><a href="#" class="contacts-footer__link _icon-telegram">Telegram bot Travel</a></li>
+					</ul>
+					<div class="footer__block">
+						<a data-da=".contacts-footer, 767, 4" href="mailto:office@travel.com" class="footer__email _icon-mail">office@travel.com</a>
+						<div data-da=".footer__left-column, 767, 2" class="footer__social social-footer">
+							<a href="https://instagram.com" class="social-footer__item _icon-instagram"></a>
+							<a href="https://facebook.com" class="social-footer__item _icon-facebook"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<div id="form-message" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close">X</button>
+				<div class="popup__text">
+					Заявка успешно отправлена!
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/app.min.js?_v=20230129192945"></script>
+</body>
+
+</html>
