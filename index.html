@@ -1,182 +1,373 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 
 <head>
+	<title>Home</title>
 	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20230820192521">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Верстка «perotravel»</title>
 </head>
 
 <body>
-	<div class="rootpage">
-		<h1>Верстка «perotravel»</h1>
-		<div class="rootpage__info">
-			Опис проєкту
-		</div>
-		<h2>Готові сторінки:</h2>
-		<ol class="rootpage__list">
-			<li><a target="_blank" href="home.html">Головна</a></li>
-			<li><a target="_blank" href="excursion.html">BLACK SEA</a></li>
-			<li><a target="_blank" href="excursions.html">ЭКСКУРСИИ</a></li>
-			<li><a target="_blank" href="cabinet.html">Личный кабинет</a></li>
-		</ol>
-		<h2>Попапи:</h2>
-		<ol class="rootpage__list">
-			<li><a target="_blank" href="home.html#"></a></li>
-		</ol>
-		<div class="rootpage__tnx">
-			<h2>Дякую за замовлення!</h2>
-			<p>Буду радий (да) гарному відгуку.</p>
-			<p>Звертайтесь ще!</p>
-		</div>
-		<div class="rootpage__contacts">
-			<h2>Мої контакти:</h2>
-			<p>Пошта: <a href="mailto:email@gmail.com">email@gmail.com</a></p>
-			<p>Телефон: <a href="tel:8800800800">8 800 800 800</a></p>
-			<p>Соц. мережі: <a href="">посилання</a></p>
+	<div class="wrapper">
+		<header data-scroll="124" data-scroll-show class="header">
+			<div class="header__container">
+				<a href="index.html" class="header__logo"><img src="img/logo.svg" alt="logo"></a>
+				<div class="header__menu menu">
+					<button type="button" class="menu__icon icon-menu"><span></span></button>
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item"><a href="index.html" class="menu__link">Home</a></li>
+							<li class="menu__item"><a href="excursions.html" class="menu__link">Excursions</a></li>
+							<li class="menu__item"><a href="cabinet.html" class="menu__link">Private office</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<section class="travel-with-us">
+				<div class="travel-with-us__main-row">
+					<div class="row-main" data-prlx-parent>
+						<div class="row-main__container">
+							<div class="row-main__block">
+								<h1 class="row-main__title">
+									<span class="row-main__subtext">TRAVEL</span>
+									<span class="row-main__main-text">TRAVEL</span>
+								</h1>
+							</div>
+							<div class="row-main__button"><a href="excursions.html" class="button">To excursions</a></div>
+							<div class="row-main__social">
+								<a href="https://instagram.com" class="row-main__item _icon-instagram"></a>
+								<a href="https://facebook.com" class="row-main__item _icon-facebook"></a>
+							</div>
+						</div>
+						<picture><source srcset="img/home/travel-with-us/bg2.webp" type="image/webp"><img data-prlx src="img/home/travel-with-us/bg2.jpg" alt="background image" class="row-main__background-image image-parallax"></picture>
+					</div>
+				</div>
+			</section>
+			<div class="page__slider-row video-swiper">
+				<div class="video-swiper__slider swiper">
+					<div class="video-swiper__wrapper swiper-wrapper">
+						<div class="video-swiper__slide swiper-slide slide-swiper-video">
+							<video class="slide-swiper-video__item" src="files/video1.mp4"></video>
+							<button type="button" class="slide-swiper-video__control"><picture><source srcset="img/player/play.webp" type="image/webp"><img src="img/player/play.png" alt="play"></picture></button>
+						</div>
+						<div class="video-swiper__slide swiper-slide slide-swiper-video">
+							<video class="slide-swiper-video__item" src="files/video2.mp4"></video>
+							<button type="button" class="slide-swiper-video__control"><picture><source srcset="img/player/play.webp" type="image/webp"><img src="img/player/play.png" alt="play"></picture></button>
+						</div>
+						<div class="video-swiper__slide swiper-slide slide-swiper-video">
+							<video class="slide-swiper-video__item" src="files/video1.mp4"></video>
+							<button type="button" class="slide-swiper-video__control"><picture><source srcset="img/player/play.webp" type="image/webp"><img src="img/player/play.png" alt="play"></picture></button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<section class="popular">
+				<div class="popular__container">
+					<div class="popular__header header-main">
+						<h2 class="header-main__title">Popular excursions</h2>
+						<a href="excursions.html" class="header-main__link">See all</a>
+					</div>
+					<div class="popular__swiper">
+						<div class="popular__slider swiper">
+							<div class="popular__wrapper swiper-wrapper">
+								<div class="popular__slide swiper-slide slide-popular">
+									<div class="slide-popular__header">
+										<p class="slide-popular__type card-text">Bus tour</p>
+										<h3 class="slide-popular__title">Black Sea</h3>
+									</div>
+									<div class="slide-popular__body">
+										<div class="slide-popular__info">
+											<span class="slide-popular__time card-text _icon-clock">6 hours</span>
+											<span class="slide-popular__price card-text _icon-money">618 $</span>
+										</div>
+										<p class="slide-popular__text card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro laborum eveniet omnis autem at. Perspiciatis aperiam incidunt adipisci porro iste ad, commodi eum reiciendis quis velit, tempore eligendi assumenda reprehenderit?
+										</p>
+									</div>
+									<a href="excursion.html" class="slide-popular__button button">More</a>
+									<picture><source data-srcset="img/home/popular/image1.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/home/popular/image1.jpg" alt="image1" class="slide-popular__bg-image swiper-lazy"></picture>
+								</div>
+								<div class="popular__slide swiper-slide slide-popular">
+									<div class="slide-popular__header">
+										<p class="slide-popular__type card-text">Horse tour</p>
+										<h3 class="slide-popular__title">Horse rides</h3>
+									</div>
+									<div class="slide-popular__body">
+										<div class="slide-popular__info">
+											<span class="slide-popular__time card-text _icon-clock">1,5 hour</span>
+											<span class="slide-popular__price card-text _icon-money">1 809 $</span>
+										</div>
+										<p class="slide-popular__text card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt eum dignissimos similique dolores eos magnam magni blanditiis officia accusamus quas est fugiat, delectus reprehenderit mollitia, pariatur reiciendis nulla non vero.</p>
+									</div>
+									<a href="excursion.html" class="slide-popular__button button">More</a>
+									<picture><source data-srcset="img/home/popular/image2.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/home/popular/image2.jpg" alt="image2" class="slide-popular__bg-image swiper-lazy"></picture>
+								</div>
+								<div class="popular__slide swiper-slide slide-popular">
+									<div class="slide-popular__header">
+										<p class="slide-popular__type card-text">Quad tour</p>
+										<h3 class="slide-popular__title">Waterfall</h3>
+									</div>
+									<div class="slide-popular__body">
+										<div class="slide-popular__info">
+											<span class="slide-popular__time card-text _icon-clock">2.5 hours</span>
+											<span class="slide-popular__price card-text _icon-money">3 515 $</span>
+										</div>
+										<p class="slide-popular__text card-text">
+											Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, sed eos recusandae repudiandae praesentium velit tenetur! Odit facilis, sint qui inventore harum cum amet earum nulla eius corrupti voluptatem aliquid?
+										</p>
+									</div>
+									<a href="excursion.html" class="slide-popular__button button">More</a>
+									<picture><source data-srcset="img/home/popular/image3.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/home/popular/image3.jpg" alt="image3" class="slide-popular__bg-image swiper-lazy"></picture>
+								</div>
+								<div class="popular__slide swiper-slide slide-popular">
+									<div class="slide-popular__header">
+										<p class="slide-popular__type card-text">Bus tour</p>
+										<h3 class="slide-popular__title">Convent</h3>
+									</div>
+									<div class="slide-popular__body">
+										<div class="slide-popular__info">
+											<span class="slide-popular__time card-text _icon-clock">4 hours</span>
+											<span class="slide-popular__price card-text _icon-money">618 $</span>
+										</div>
+										<p class="slide-popular__text card-text">
+											Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, similique ipsam. Accusantium dolor quod facere deserunt, dicta quaerat accusamus perferendis, rem esse ipsa modi officia eveniet, provident libero. Odit, eveniet.
+										</p>
+									</div>
+									<a href="excursion.html" class="slide-popular__button button">More</a>
+									<picture><source data-srcset="img/home/popular/image4.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/home/popular/image4.jpg" alt="image4" class="slide-popular__bg-image swiper-lazy"></picture>
+								</div>
+								<div class="popular__slide swiper-slide slide-popular">
+									<div class="slide-popular__header">
+										<p class="slide-popular__type card-text">Quad tour</p>
+										<h3 class="slide-popular__title">Waterfall</h3>
+									</div>
+									<div class="slide-popular__body">
+										<div class="slide-popular__info">
+											<span class="slide-popular__time card-text _icon-clock">2.5 hours</span>
+											<span class="slide-popular__price card-text _icon-money">3 515 $</span>
+										</div>
+										<p class="slide-popular__text card-text">
+											Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, sed eos recusandae repudiandae praesentium velit tenetur! Odit facilis, sint qui inventore harum cum amet earum nulla eius corrupti voluptatem aliquid?
+										</p>
+									</div>
+									<a href="excursion.html" class="slide-popular__button button">More</a>
+									<picture><source data-srcset="img/home/popular/image3.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/home/popular/image3.jpg" alt="image3" class="slide-popular__bg-image swiper-lazy"></picture>
+								</div>
+							</div>
+							<div class="popular__status">
+								<div class="popular__controls">
+									<button type="button" class="swiper-button-prev _icon-select-arrow"></button>
+									<button type="button" class="swiper-button-next _icon-select-arrow"></button>
+								</div>
+								<div class="swiper-scrollbar"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="about-us">
+				<div data-watch data-watch-once data-watch-threshold="0.3" class="about-us__block">
+					<picture><source data-srcset="img/home/about-us/lake.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/home/about-us/lake.jpg" alt="lake and mountains" class="about-us__image"></picture>
+					<div class="about-us__container">
+						<div class="about-us__card">
+							<div class="about-us__header header-main">
+								<h2 class="header-main__title">About us</h2>
+							</div>
+							<div class="about-us__text">
+								<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi architecto vel tenetur!</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+							</div>
+							<div class="about-us__text">
+								<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="tour-types">
+				<div class="tour-types__container">
+					<div class="tour-types__header header-main">
+						<h2 class="header-main__title">Types of excursions</h2>
+					</div>
+					<div class="tour-types__items">
+						<article class="tour-types__item item-tour">
+							<picture><source srcset="img/home/tour-types/bus.webp" type="image/webp"><img src="img/home/tour-types/bus.png" alt="bus" class="item-tour__icon"></picture>
+							<div class="item-tour__body">
+								<h4 class="item-tour__subtitle">Bus tour</h4>
+								<p class="item-tour__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur praesentium inventore natus nihil soluta perspiciatis ut cumque, aperiam debitis nulla fuga blanditiis doloremque ea laboriosam quibusdam assumenda, saepe voluptates non?</p>
+							</div>
+						</article>
+						<article class="tour-types__item item-tour">
+							<picture><source srcset="img/home/tour-types/jeeping.webp" type="image/webp"><img src="img/home/tour-types/jeeping.png" alt="jeep" class="item-tour__icon"></picture>
+							<div class="item-tour__body">
+								<h4 class="item-tour__subtitle">Jeeping</h4>
+								<p class="item-tour__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim alias ratione quisquam commodi, amet facilis expedita ex sapiente corrupti, dolore labore. Explicabo recusandae pariatur ab esse, sint numquam. Cupiditate, vero!</p>
+							</div>
+						</article>
+						<article class="tour-types__item item-tour">
+							<picture><source srcset="img/home/tour-types/yachting.webp" type="image/webp"><img src="img/home/tour-types/yachting.png" alt="yacht" class="item-tour__icon"></picture>
+							<div class="item-tour__body">
+								<h4 class="item-tour__subtitle">Yachting</h4>
+								<p class="item-tour__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus omnis odit labore quisquam distinctio architecto dolor vero, similique inventore quod eaque sit maxime. Earum voluptate ratione alias? Magni, recusandae rem?</p>
+							</div>
+						</article>
+						<article class="tour-types__item item-tour">
+							<picture><source srcset="img/home/tour-types/canyoning.webp" type="image/webp"><img src="img/home/tour-types/canyoning.png" alt="canyon" class="item-tour__icon"></picture>
+							<div class="item-tour__body">
+								<h4 class="item-tour__subtitle">Canyoning</h4>
+								<p class="item-tour__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, cumque quam ad aliquid explicabo animi ipsa voluptatem voluptatibus ab deserunt fuga reprehenderit. Voluptate corporis est at rerum dolores possimus perspiciatis?</p>
+							</div>
+						</article>
+					</div>
+					<div class="tour-types__bottom">
+						<p class="tour-types__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi officia, distinctio aut cupiditate reprehenderit iure unde in ex, voluptatibus quidem, dolor quia voluptatum explicabo voluptate aliquam dolore temporibus magnam corporis.</p>
+						<a href="excursions.html" class="tour-types__button button">To excursions</a>
+					</div>
+				</div>
+			</section>
+			<section class="gallery">
+				<div class="gallery__container">
+					<div class="gallery__header header-main">
+						<h2 class="header-main__title">Gallery</h2>
+						<a href="excursions.html" class="header-main__link">See all</a>
+					</div>
+				</div>
+				<div data-watch data-watch-once data-watch-threshold="0.5" data-gallery class="gallery__items">
+					<div class="gallery__column column-gallery column-gallery_none">
+						<div class="column-gallery__row row-gallery"><a href="img/gallery/image1Big.jpg" class="row-gallery__image-ibg row-gallery__image-ibg_one"><picture><source data-srcset="img/gallery/image1.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/gallery/image1.jpg" alt="image" class="row-gallery__preview"></picture></a></div>
+						<div class="column-gallery__row row-gallery">
+							<div class="row-gallery__column row-gallery__column_big"><a href="img/gallery/image2Big.jpg" class="row-gallery__image-ibg row-gallery__image-ibg_two"><picture><source data-srcset="img/gallery/image2.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/gallery/image2.jpg" alt="image" class="row-gallery__preview"></picture></a></div>
+							<div class="row-gallery__column row-gallery__column_small">
+								<a href="img/gallery/image3Big.jpg" class="row-gallery__image-ibg row-gallery__image-ibg_three"><picture><source data-srcset="img/gallery/image3.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/gallery/image3.jpg" alt="image" class="row-gallery__preview"></picture></a>
+								<a href="img/gallery/image4Big.jpg" class="row-gallery__image-ibg row-gallery__image-ibg_four"><picture><source data-srcset="img/gallery/image4.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/gallery/image4.jpg" alt="image" class="row-gallery__preview"></picture></a>
+							</div>
+						</div>
+					</div>
+					<div class="gallery__column column-gallery column-gallery_small">
+						<div class="row-gallery"><a href="img/gallery/image5Big.jpg" class="row-gallery__image-ibg row-gallery__image-ibg_five"><picture><source data-srcset="img/gallery/image5.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/gallery/image5.jpg" alt="image" class="row-gallery__preview"></picture></a></div>
+					</div>
+					<div class="gallery__column column-gallery">
+						<div class="column-gallery__row row-gallery row-gallery_no-flex">
+							<a href="img/gallery/image6Big.jpg" class="row-gallery__image-ibg row-gallery__image-ibg_six"><picture><source data-srcset="img/gallery/image6.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/gallery/image6.jpg" alt="image" class="row-gallery__preview"></picture></a>
+							<a href="img/gallery/image7Big.jpg" class="row-gallery__image-ibg row-gallery__image-ibg_seven"><picture><source data-srcset="img/gallery/image7.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/gallery/image7.jpg" alt="image" class="row-gallery__preview"></picture></a>
+						</div>
+						<div data-da=".gallery__items, 480, 3" class="column-gallery__row row-gallery row-gallery_bottom"><a href="img/gallery/image8Big.jpg" class="row-gallery__image-ibg row-gallery__image-ibg_eight"><picture><source data-srcset="img/gallery/image8.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/gallery/image8.jpg" alt="image" class="row-gallery__preview"></picture></a></div>
+					</div>
+				</div>
+			</section>
+			<section class="reviews">
+				<div class="reviews__container">
+					<div class="reviews__header header-main">
+						<h2 class="header-main__title">Reviews</h2>
+						<a href="excursions.html" class="header-main__link">See all</a>
+					</div>
+					<div class="reviews__slider swiper">
+						<div class="reviews__wrapper swiper-wrapper">
+							<div class="reviews__slide swiper-slide slide-comment">
+								<picture><source data-srcset="img/reviews/user1.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/reviews/user1.jpg" alt="user1" class="slide-comment__image swiper-lazy"></picture>
+								<div class="slide-comment__body">
+									<div class="slide-comment__info"><span class="slide-comment__name">Ivan Ivanov</span>, <span class="slide-comment__age">25 years old</span></div>
+									<p class="slide-comment__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+								</div>
+							</div>
+							<div class="reviews__slide swiper-slide slide-comment">
+								<picture><source data-srcset="img/reviews/user2.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/reviews/user2.jpg" alt="user2" class="slide-comment__image swiper-lazy"></picture>
+								<div class="slide-comment__body">
+									<div class="slide-comment__info"><span class="slide-comment__name">Ivan Ivanov</span>, <span class="slide-comment__age">25 years old</span></div>
+									<p class="slide-comment__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+								</div>
+							</div>
+							<div class="reviews__slide swiper-slide slide-comment">
+								<picture><source data-srcset="img/reviews/user1.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/reviews/user1.jpg" alt="user1" class="slide-comment__image swiper-lazy"></picture>
+								<div class="slide-comment__body">
+									<div class="slide-comment__info"><span class="slide-comment__name">Ivan Ivanov</span>, <span class="slide-comment__age">25 years old</span></div>
+									<p class="slide-comment__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+								</div>
+							</div>
+							<div class="reviews__slide swiper-slide slide-comment">
+								<picture><source data-srcset="img/reviews/user2.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/reviews/user2.jpg" alt="user2" class="slide-comment__image swiper-lazy"></picture>
+								<div class="slide-comment__body">
+									<div class="slide-comment__info"><span class="slide-comment__name">Ivan Ivanov</span>, <span class="slide-comment__age">25 years old</span></div>
+									<p class="slide-comment__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+								</div>
+							</div>
+						</div>
+						<div class="reviews__status">
+							<div class="reviews__controls">
+								<button type="button" class="swiper-button-prev _icon-select-arrow"></button>
+								<button type="button" class="swiper-button-next _icon-select-arrow"></button>
+							</div>
+							<div class="swiper-scrollbar"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="questions">
+				<div data-prlx-parent class="questions__content">
+					<div class="questions__container">
+						<form data-dev data-popup-message="#form-message" action="#" method="" class="questions__form form-questions">
+							<div class="form-questions__header">
+								<h2 class="form-questions__title">Do you have any questions?</h2>
+								<h4 class="form-questions__subtitle">Leave a request and we will answer</h4>
+							</div>
+							<div class="form-questions__body">
+								<input data-required data-validate data-placeholder-nohide type="text" name="user_name" placeholder="Name" class="form-questions__input input-question">
+								<input data-required data-validate data-placeholder-nohide type="tel" name="user_phone" placeholder="Phone number" class="form-questions__input input-question">
+								<input data-required="email" data-placeholder-nohide type="text" name="user_email" data-error="Enter your email" placeholder="Email" class="form-questions__input input-question">
+							</div>
+							<button type="submit" class="form-questions__button button">Submit your application</button>
+						</form>
+					</div>
+					<picture><source data-srcset="img/home/questions/bg-image.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-prlx data-src="img/home/questions/bg-image.jpg" alt="forest" class="questions__bg-image image-parallax"></picture>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__left-column">
+					<img src="img/logo.svg" alt="logo" class="footer__logo">
+					<nav data-da=".footer__right-column, 767, 0" class="footer__menu menu-footer">
+						<ul class="menu-footer__list">
+							<li class="menu-footer__item"><a href="index.html" class="menu-footer__link">Home</a></li>
+							<li class="menu-footer__item"><a href="excursions.html" class="menu-footer__link">Excursions</a></li>
+							<li class="menu-footer__item"><a href="#" class="menu-footer__link">Private office</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="footer__right-column">
+					<ul class="footer__contacts contacts-footer">
+						<li class="contacts-footer__item"><a href="tel:+380000000000" class="contacts-footer__link _icon-whatsapp">+38 000 000 00 00</a></li>
+						<li class="contacts-footer__item"><a href="tel:+381111111111" class="contacts-footer__link _icon-telegram">+38 111 111 11 11</a></li>
+						<li class="contacts-footer__item"><a href="#" class="contacts-footer__link _icon-telegram">Telegram bot Travel</a></li>
+					</ul>
+					<div class="footer__block">
+						<a data-da=".contacts-footer, 767, 4" href="mailto:office@travel.com" class="footer__email _icon-mail">office@travel.com</a>
+						<div data-da=".footer__left-column, 767, 2" class="footer__social social-footer">
+							<a href="https://instagram.com" class="social-footer__item _icon-instagram"></a>
+							<a href="https://facebook.com" class="social-footer__item _icon-facebook"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<div id="form-message" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close">X</button>
+				<div class="popup__text">
+					Заявка успешно отправлена!
+				</div>
+			</div>
 		</div>
 	</div>
+	<script src="js/app.min.js?_v=20230820192521"></script>
 </body>
-<style>
-	@charset "UTF-8";
-	@import url("https://fonts.googleapis.com/css?family=Montserrat:regular,700&display=swap");
-
-	*,
-	*::before,
-	*::after {
-		padding: 0px;
-		margin: 0px;
-		border: 0px;
-		box-sizing: border-box;
-	}
-
-	html,
-	body {
-		height: 100%;
-		margin: 0;
-		padding: 0;
-		min-width: 320px;
-		width: 100%;
-		color: #fff;
-		background-color: #5e5373;
-	}
-
-	body {
-		font-family: Montserrat;
-		font-size: 100%;
-		line-height: 1;
-		font-size: 1rem;
-	}
-
-	a {
-		text-decoration: underline;
-		color: #ebe691
-	}
-
-	a:visited {
-		text-decoration: underline;
-		color: #aaa768;
-	}
-
-	a:hover {
-		text-decoration: none;
-	}
-
-	ul li {
-		list-style: none;
-	}
-
-	img {
-		vertical-align: top;
-	}
-
-	.wrapper {
-		width: 100%;
-		min-height: 100%;
-		overflow: hidden;
-	}
-
-	.rootpage {
-		padding: 30px;
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-	}
-
-	@media (max-width: 767px) {
-		.rootpage {
-			padding: 30px 15px;
-		}
-	}
-
-	h1 {
-		color: #ebe691;
-		font-size: 2.5rem;
-		margin: 0px 0px 1.25rem 0px;
-	}
-
-	@media (max-width: 767px) {
-		h1 {
-			font-size: 1.85rem;
-			margin: 0px 0px 1.25rem 0px;
-		}
-	}
-
-	h2 {
-		color: #ebe691;
-		font-size: 1.25rem;
-		margin: 0px 0px 1rem 0px;
-	}
-
-	@media (max-width: 767px) {
-		h2 {
-			font-size: 1.125rem;
-			margin: 0px 0px 1rem 0px;
-		}
-	}
-
-	.rootpage__info {
-		line-height: 140%;
-		margin: 0px 0px 1.5rem 0px;
-	}
-
-	.rootpage__list {
-		margin: 0px 0px 2.25rem 1.25rem;
-	}
-
-	.rootpage__list li:not(:last-child) {
-		margin: 0px 0px 15px 0px;
-	}
-
-	.rootpage__contacts,
-	.rootpage__tnx {
-		border-radius: 200px;
-		padding: 20px 65px;
-		line-height: 140%;
-	}
-
-	@media (max-width: 767px) {
-
-		.rootpage__contacts,
-		.rootpage__tnx {
-			border-radius: 40px;
-			padding: 20px;
-		}
-	}
-
-	.rootpage__contacts {
-		background: #32b5a4;
-
-	}
-
-	.rootpage__contacts a {
-		color: #ebe691;
-	}
-
-	.rootpage__tnx {
-		background: #c22d63;
-		margin: 0px 0px 1rem 0px;
-	}
-</style>
 
 </html>
